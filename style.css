@@ -1,0 +1,219 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: white;
+  font-family: sans-serif;
+}
+header{
+  background-color: darkblue;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+#sidebar{
+  position: fixed;
+  height: 100vh; 
+  width:30vw;
+  padding: 15px;
+  overflow-y: auto; 
+  background-color: lightgray;
+cursor: pointer;
+scrollbar-width: thin;
+}
+#sidebar:hover{
+  background-color: bisque;
+}
+#sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  background: darkblue;
+  border-radius: 4px;
+}
+#sidebar h2, #sidebar h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: darkblue;
+}
+#films {
+  max-height: 80vh; 
+  overflow-y: auto;
+  scrollbar-width: thin; 
+  scrollbar-color: darkblue lightgray; 
+}
+#films::-webkit-scrollbar {
+  width: 8px;
+}
+
+#films::-webkit-scrollbar-thumb {
+  background: darkblue;
+  border-radius: 4px;
+}
+ul#films{
+  list-style-type: none;
+  padding: 10px;
+}
+
+#films li.active {
+  background: darkblue !important;
+  color: white;
+  font-weight: bold;
+}
+
+ul#films li {
+  background: white; 
+  padding: 10px;
+  margin-bottom: 8px; 
+  border-radius: 5px; 
+  text-align: center;
+  transition: 0.3s ease-in-out; 
+}
+
+ul#films li:hover {
+  background: darkblue; 
+  color: white; 
+  cursor: pointer;
+}
+#add-movie-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #222;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#add-movie-form h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #FFD700;
+}
+
+#add-movie-form input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #333;
+  color: white;
+}
+
+#add-movie-form input::placeholder {
+  color: #bbb;
+}
+
+#add-movie-form button {
+  padding: 10px;
+  font-size: 16px;
+  background: #FFD700;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#add-movie-form button:hover {
+  background: #ffcc00;
+}
+
+@media (max-width: 500px) {
+  #add-movie-form {
+      width: 90%;
+  }
+}
+
+#main-content {
+  margin-left: 22vw; 
+  padding: 20px;
+}
+#poster {
+  width: 100%; 
+  max-width: 300px; 
+  display: block;
+  margin: 10px auto; 
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); 
+}
+#movie-details {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#movie-details img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#buy-ticket {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
+}
+
+#buy-ticket:hover {
+  background-color: navy;
+}
+
+
+
+.sold-out {
+  background: gray !important;
+  color: red;
+  pointer-events: none; /* Prevents clicking */
+}
+@media (max-width: 768px) {
+  #sidebar {
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Adjust height */
+      position: relative; /* No fixed position */
+  }
+  #main-content {
+      margin-left: 0; /* No need for margin */
+      padding: 10px;
+  }
+}
+@media (max-width: 600px) {
+  #poster {
+      max-width: 90%; /* Make it responsive */
+      height: auto; /* Maintain aspect ratio */
+  }
+}
+@media (max-width: 600px) {
+  #buy-ticket {
+      width: 100%; /* Full width */
+      padding: 12px;
+      font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  #movie-details {
+      max-width: 100%; /* Allow full width */
+      padding: 15px;
+  }
+}

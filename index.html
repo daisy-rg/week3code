@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-web-App</title>
+    <link rel="stylesheet" href="./style.css">  <!--linking of css-->
+</head>
+<body>
+    <header>
+        <h1>
+            <!--logo-->
+            Flatiron Movie Theater
+        </h1>
+    </header>
+<!--container that carry sidebar and main content details-->
+    <div id="container">
+        <!-- Sidebar for movie list -->
+        <aside id="sidebar">
+            <h2>Movies</h2>
+            <h3>Premiering Movies</h3>
+            <ul id="films">
+                <li class="placeholder">Loading movies...</li>
+            </ul>
+  
+        </aside>
+        
+
+        <!-- Movie details section -->
+        <main>
+            <div id="movie-details">
+
+                <img id="poster" src="" alt="Movie Poster">
+                <h2 id="title">Movie Title</h2>
+                <p><strong>Runtime:</strong> <span id="runtime"></span> minutes</p>
+                <p><strong>Showtime:</strong> <span id="showtime"></span></p>
+                <p><strong>Available Tickets:</strong> <span id="available-tickets"></span></p>
+                <button id="buy-ticket">Buy Ticket</button>
+            </div>
+            <form id="add-movie-form">
+                <h3>Add a New Movie</h3>
+                <input type="text" id="new-title" placeholder="Movie Title" required />
+                <input type="text" id="new-poster" placeholder="Poster URL" required />
+                <input type="number" id="new-runtime" placeholder="Runtime (min)" required />
+                <input type="text" id="new-showtime" placeholder="Showtime (e.g., 7:00 PM)" required />
+                <input type="number" id="new-capacity" placeholder="Capacity" required />
+                <button type="submit">Add Movie</button>
+            </form>
+            
+        </main>
+    </div>
+    <script src="./src/index.js"></script>  <!--linking of javascript-->
+</body>
+</html>
