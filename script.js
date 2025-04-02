@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/films";
+const API_URL = 'http://localhost:3000';
 
 // fetch and display the first movie
 const fetchFirstMovie = () => {
